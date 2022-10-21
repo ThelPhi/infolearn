@@ -1,3 +1,7 @@
+vcs.xml
+workspace.xml
+
+
 *.log
 *.pot
 *.pyc
