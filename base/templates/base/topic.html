@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="topic-container">
+    <div class="chapter-list">
+        <p>Chapters</p>
+        <hr>
+        {% for chapter in chapters %}
+        <p>{{chapter}}</p>
+        <hr>
+        {% endfor %}
+    </div>
+    <div class="chapter-container">
+        <h3>{{topic.headline}}</h3>
+        <h4>{{chapter.headline}}</h4>
+        <p>{{chapter.body}}</p>
+        <div class="change-chapter-bar">
+            {% if chapter.prev is not None %}
+                <a href="{% url 'topic' topic.id %}?chapter={{chapter.prev.id}}">Previous Chapter</a>
+            {% endif %}
+
+
+            {% if chapter.next is not None %}
+                <a href="{% url 'topic' topic.id %}?chapter={{chapter.next.id}}">Next Chapter</a>
+            {% endif %}
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

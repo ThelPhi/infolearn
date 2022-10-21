@@ -1,0 +1,42 @@
+body{
+	margin: 50px;
+	background-color: #F7F8FA;
+}
+.level-container{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.topic-preview-container{
+
+}
+
+.home-container{
+	display:grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	margin: 15px;
+}
+.topic-container{
+	display:grid;
+	grid-template-columns: 1fr 4fr;
+}
+.chapter-list{
+	margin-right: 25px;
+	margin-left: 100pt;
+}
+.change-chapter-bar{
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: thin;
+	border-color: #25395C;
+}
+.chapter-container{
+	text-align: center;
+	border-style: solid;
+	border-width: thin;
+	border-color: grey;
+	background-color: #FFFFFF;
+	margin-right: 100pt;
+	margin-left: 25pt;
+	padding: 15pt
+}

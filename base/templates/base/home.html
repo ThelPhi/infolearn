@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="home-container">
+
+    <div class="category-container">
+        <h3>Topics</h3>
+        {% for category in categories %}
+        <a href="{% url 'category' category %}"><p>{{category}}</p></a>
+        {% endfor %}
+    </div>
+
+    <div class="topics-container">
+        {% for level in levels%}
+        <h3>{{level}}</h3>
+        <div class="level-container">
+        {% for topic in topics %}
+            {% if topic.level == level %}
+
+            {% include "base/topic_preview.html" %}
+
+            {% endif %}
+        {% endfor %}
+             </div>
+        {% endfor %}
+    </div>
+
+    <div class="Recommendation">
+        <h3>Recommendation</h3>
+    </div>
+</div>
+
+{% endblock %}

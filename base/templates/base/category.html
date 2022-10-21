@@ -1,0 +1,11 @@
+
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% for topic in topics %}
+
+{% include 'base/topic_preview.html' %}
+
+{% endfor %}
+{% endblock %}

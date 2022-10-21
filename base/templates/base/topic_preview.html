@@ -1,0 +1,13 @@
+<div class="topic-preview-container">
+            <h4>
+                <a href="{% url 'topic' topic.id %}?chapter={{topic.start_chapter.id}}">{{topic}}</a>
+            </h4>
+            <p>{{topic.short_description}}</p>
+            <div>
+
+                <small>{{topic.created|date}}</small>
+               <a href="{% url 'category' topic.categories %}"><small>{{topic.categories}}</small></a>
+
+            </div>
+            <hr>
+        </div>
